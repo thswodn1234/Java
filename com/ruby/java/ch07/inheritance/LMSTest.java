@@ -1,5 +1,7 @@
 package com.ruby.java.ch07.inheritance;
 
+import edu.part7.Student;
+
 public class LMSTest {
 	public static void main(String[] args) {
 		Employee e = new Employee("오정임",47,"입학처");

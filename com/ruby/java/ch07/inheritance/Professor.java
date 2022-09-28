@@ -1,5 +1,7 @@
 package com.ruby.java.ch07.inheritance;
 
+import edu.part7.Person;
+
 public class Professor extends Person {
 	private String subject;
 	
