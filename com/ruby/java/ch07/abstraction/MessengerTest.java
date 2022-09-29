@@ -6,10 +6,17 @@ public class MessengerTest {
 		IphoneMessenger iphone = new IphoneMessenger();
 		GalaxyMessenger galaxy = new GalaxyMessenger();
 		
-//		Messenger m = new Messenger();
-		Messenger.getConnection();
-		System.out.println(iphone.getMessage());
+		System.out.println("메신저 최소 문자 크기" + Messenger.MIN_SIZE);
+		System.out.println("메신저 최대 문자 크기" + Messenger.MAX_SIZE);
+
+		iphone.setLogin(true);
+		iphone.getMessage();
+		iphone.setMessage("hello");
+		iphone.clearMessage();
 		
-		System.out.println("메신저 최소 문자크기 ");
+		galaxy.setLogin(true);
+		galaxy.getMessage();
+		galaxy.setMessage("hi");
+		galaxy.changeKeyboard();
 	}
 }
