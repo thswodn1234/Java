@@ -3,6 +3,7 @@ package problem;
 import java.util.ArrayList;
 
 import java.util.List;
+import java.util.Vector;
 
 public class DrinksMain {
 
@@ -12,23 +13,23 @@ public class DrinksMain {
 
 			Juice j = new Juice("오렌지 쥬스", 3500);
 			j.drink();
-			j.drink1();
+//			j.drink1();
 
 			Coffee c = new Coffee("아이스 아메리카노", 2000);
 			c.drink();
-			c.drink1();
+//			c.drink1();
 
 			Beer b = new Beer("테라", 3500);
 			b.drink();
-			b.drink1();
+//			b.drink1();
 
 			Water w = new Water("삼다수", 2000);
 			w.drink();
-			w.drink1();
+//			w.drink1();
 
 			Tea t = new Tea("옥수수수염차", 2000);
 			t.drink();
-			t.drink1();
+//			t.drink1();
 
 		}
 
@@ -53,9 +54,12 @@ public class DrinksMain {
 			for (Drinks t : d) {
 
 				t.drink();
-				t.drink1();
+//				t.drink1();
 
 			}
+//			for(int i = 0; i < 5; i++) {
+//				System.out.println(d[i]);
+//			}
 
 		}
 		
@@ -74,11 +78,7 @@ public class DrinksMain {
 			d3.drink();
 			d4.drink();
 			
-			d0.drink1();
-			d1.drink1();
-			d2.drink1();
-			d3.drink1();
-			d4.drink1();
+			
 		}
 
 		System.out.println("=================================================");
@@ -104,8 +104,37 @@ public class DrinksMain {
 				t.drink();
 
 			}
+			
+			
+			System.out.println();
+			
+			List<Drinks> liqid = new ArrayList<>();
+			
+			liqid.add(new Juice("오렌지 쥬스", 3500));
 
+			liqid.add(new Coffee("아이스 아메리카노", 2000));
+
+			liqid.add(new Beer("테라", 3500));
+
+			liqid.add(new Water("삼다수", 2000));
+
+			liqid.add(new Tea("옥수수수염차", 2000));
+			
+//			for(int i = 0; i < liqid.size(); i++) {
+//				liqid.get(i).drink();
+//			}
+			
+			for(Drinks t : liqid) {
+				t.drink();
+			}
+			
+	//The type of the expression must be an array type but it resolved to List<Drinks>
+//			for(int i = 0; i < 5; i++) {
+//				liqid[i].drink();
+//			}
 		}
+			
+		
 
 	}
 
