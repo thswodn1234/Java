@@ -22,7 +22,7 @@ abstract class Person {
 	}
 
 	public String toString() {
-		return pnum + ":" + name + ":" + age;
+		return pnum + " : " + name + " : " + age;
 
 	}
 
@@ -45,7 +45,7 @@ class Employee extends Person {
 
 	@Override
 	public void show() {
-		System.out.println(super.toString() + ":" + job + ":" + dept + ":" + salary);
+		System.out.println(super.toString() + " : " + job + " : " + dept + " : " + salary);
 
 	}
 
@@ -59,24 +59,28 @@ class Employee extends Person {
 class Designer extends Employee {
 	private String language;
 	private int workYear;
-	private int salary;
+
 	
 
 	public Designer(String pnum, String name, int age, String job, String dept, int salary, String language, int workYear) {
 		super(pnum, name, age, job, dept, salary);
+		
 		this.language = language;
 		this.workYear = workYear;
 	}
 	
 	@Override
 	public void show() {
-		System.out.println(super.toString() + ":" + language + ":" + workYear);
+		System.out.println(super.toString() + " : " + language + " : " + workYear);
 
 	}
 
 	@Override
 	public void increase() {
-		this.salary += 0.1 * salary;
+		
+		super.increase();
+		
+		
 		
 	}
 
@@ -99,7 +103,7 @@ class Student extends Person {
 	@Override
 	public void show() {
 
-		System.out.println(super.toString() + ":" + schoolName + ":" + schoolyear + ":" + scholarship);
+		System.out.println(super.toString() + " : " + schoolName + " : " + schoolyear + " : " + scholarship);
 
 	}
 
@@ -124,7 +128,7 @@ class WorkStudent extends Student {
 	}
 	
 	public void show() {
-		System.out.println(super.toString() + ":" + job + ":" + daypay);
+		System.out.println(super.toString() + " : " + job + " : " + daypay);
 	}
 	
 	public void increase() {
@@ -150,7 +154,7 @@ public class TestPersons {
 	static void getData(Person[] p) {
 	
 		Employee e = new Employee("pnum1", "name1", 10, "job1", "dept1", 10);
-        Designer d = new Designer("pnum2", "name2", 20, "job2", "dept2", 20,"java",10);
+        Designer d = new Designer("pnum2", "name2", 20, "job2", "dept2", 20,"java",20);
         Student s = new Student("pnum3", "name3", 30, "job3", 30, 30);
         WorkStudent w = new WorkStudent("pnum4", "name4", 40, "job4", 40, 40, "s", 40);
         p[0] = e;
