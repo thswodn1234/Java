@@ -4,9 +4,8 @@ abstract class Employee {
 	String name;
 	int salary;
 	
-	public abstract void calcSalary();
-	
-	public abstract void calcBonus();
+//	public void calcSalary();
+//	public  void calcBonus();
 }
 
 class Salesman extends Employee {
@@ -27,11 +26,13 @@ class Consultant extends Employee{
 	}
 }
 
-abstract class Manager extends Employee {
+class Manager extends Employee {
 	public void calcSalary() {
 		System.out.println("Manager 급여 = 기본급 + 팀 성과 수당");
 	}
-	
+	public void calcBonus() {
+		
+	}; 
 }
 
 class Director extends Manager {
@@ -43,14 +44,26 @@ class Director extends Manager {
 
 public class HRSTest {
 	public static void main(String[] args) {
-//		Employee e = new Employee(); 
-		Salesman s = new Salesman();
-		Consultant c = new Consultant();
-		Director d = new Director();
-//        Manager m = new Manager();
+		Salesman s1 = new Salesman();
+		Employee s2 = new Salesman();
+		Object s3 = new Salesman();
 		
-		s.calcBonus();
-		c.calcBonus();
-		d.calcBonus();
+		Object m1 = new Manager();
+		Employee m2 = new Manager();
+		Manager m3 = new Manager();
+		
+		Object arr[] = new Object[6];
+		arr[0] = s1;
+		arr[1] = s2;
+		arr[2] = s3;
+		arr[3] = m1;
+		arr[4] = m2;
+		arr[5] = m3;
+		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		
+		
 	}
 }
