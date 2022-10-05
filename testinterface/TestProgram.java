@@ -204,6 +204,7 @@ public class TestProgram {
 //			showAll(setPerson);
 			
 			Message m[] = new Message[2];
+			
 			m[0] = new Employee("pnum1", "name1", 10, "job1", "dept1",
 					10);
 			m[1] = new Designer("pnum2", "name2", 20, "job2", "dept2", 20,
